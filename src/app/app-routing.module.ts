@@ -7,8 +7,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductDetailGuard } from './products/product-detail.guard';
 
 const routes: Routes = [
-  { path: 'products', component: ProductListComponent },
-  { path: 'products/:id', canActivate: [ ProductDetailGuard ], component: ProductDetailComponent },
+  // { path: 'products', component: ProductListComponent },
+  // { path: 'products/:id', canActivate: [ ProductDetailGuard ], component: ProductDetailComponent },
   { path: 'welcome', component: HomeComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
