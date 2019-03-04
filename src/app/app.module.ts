@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductModule } from './products/product.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -20,9 +21,14 @@ import { ProductModule } from './products/product.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, //RouterModule
-    HttpClientModule,
-    ProductModule // import exported module
+    ProductModule, // import exported module // order metters
+    AppRoutingModule, //RouterModule // bellow we have the equivalence
+    // RouterModule.forRoot([
+    //   { path: 'welcome', component: HomeComponent },
+    //   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+    //   { path: '**', component: PageNotFoundComponent }
+    // ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
