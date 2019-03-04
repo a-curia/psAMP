@@ -1,3 +1,4 @@
+{{pageTitle}}
 <div class='card' *ngIf='product'><!-- use this stead of  ? safe navigation operator -->
   <div class='card-header'>
     {{pageTitle + ': ' + product?.productName}} <!-- ? safe navigation operator so we get rid of undefined | DOES NOT WORK with ngModel-->
